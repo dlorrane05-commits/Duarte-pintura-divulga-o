@@ -1,0 +1,319 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #000000; /* Fonte do texto: PRETO */
+    background-color: #FFFFFF; /* Fundo principal: BRANCO */
+    line-height: 1.7; 
+    font-size: 1.1rem; /* Fonte base original */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Cores e Estilos */
+:root {
+    --marrom: #A0522D; /* Cor Marrom */
+    --branco: #FFFFFF; /* Cor Branca */
+    --preto: #000000; /* Cor Preta */
+    --destaque-amarelo: #FFD700; /* Amarelo (Inspirado nas marcações de garagem) */
+}
+
+/* --- ESTILOS GERAIS DE TEXTO E TÍTULOS (Marrom, Negrito, Maior) --- */
+
+/* Aplica Marrom e Negrito a todos os títulos */
+h1, h2, h3, h4 {
+    color: var(--marrom);
+    font-weight: 700; /* Negrito */
+}
+
+/* Ajustes de tamanho dos títulos */
+h2 {
+    font-size: 2.4rem; 
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 1.8rem; 
+    margin-bottom: 30px;
+}
+
+h4 {
+    font-size: 1.4rem; 
+    margin-bottom: 10px;
+}
+
+p {
+    color: var(--preto); /* Garante que o texto seja preto */
+    font-size: 1.1rem; /* Garante que o texto base seja 1.1rem */
+}
+
+/* --- FIM DOS ESTILOS GERAIS DE TEXTO E TÍTULOS --- */
+
+
+/* Header e Logo */
+header {
+    background-color: var(--marrom);
+    color: var(--branco);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo para alinhar o Logo e o Título lado a lado */
+#site-title {
+    font-size: 1.8rem; /* Tamanho do texto do título */
+    font-weight: 700;
+    color: var(--branco); 
+    display: flex; /* Habilita o alinhamento do logo e do texto */
+    align-items: center;
+    gap: 10px; /* Espaço entre o logo e o texto */
+}
+
+.header-logo {
+    height: 40px; /* Altura do logo */
+    width: auto;
+    border-radius: 5px; /* Opicional: cantos suaves para o logo */
+}
+
+/* Garante que a animação afete apenas o texto e não o logo */
+#site-title span {
+    color: var(--branco); /* Cor inicial do texto */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--destaque-amarelo);
+}
+
+/* Seções */
+section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #F8F8F8; 
+}
+
+.hero h2 {
+    font-size: 2.8rem; /* Destaque máximo para o slogan */
+    color: var(--preto); /* Slogan principal em preto para alto contraste */
+}
+
+/* Fonte aumentada na seção Hero (última alteração) */
+.hero p {
+    font-size: 1.4rem; 
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Botões */
+.btn-contato, .btn-whatsapp {
+    display: inline-block;
+    background-color: var(--marrom);
+    color: var(--branco);
+    padding: 15px 35px; /* Botão ainda maior */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1.2rem; /* Texto maior no botão */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Dá mais espaço acima do botão na seção Hero */
+.btn-contato {
+    margin-top: 40px; 
+}
+
+.btn-contato:hover, .btn-whatsapp:hover {
+    background-color: #8B4513; /* Marrom mais escuro */
+    transform: translateY(-2px);
+}
+
+.btn-whatsapp {
+    background-color: #25D366; /* Verde WhatsApp */
+    margin-top: 20px;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1DA851;
+}
+
+/* Serviços */
+.servicos-section {
+    background-color: var(--branco);
+}
+
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.servico-item {
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    background-color: var(--branco);
+    text-align: left;
+}
+
+/* Galeria */
+.galeria-section {
+    background-color: #F8F8F8;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.galeria-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.img-responsive {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.galeria-item:hover .img-responsive {
+    transform: scale(1.05);
+}
+
+/* Contato */
+.contato-section {
+    background-color: var(--branco);
+}
+
+/* NOVO: Aumenta o tamanho da fonte dos parágrafos da seção Contato */
+.contato-section p {
+    font-size: 1.3rem; /* Aumento para 1.3rem */
+}
+
+.contato-info {
+    margin: 30px auto;
+    padding: 20px;
+    border: 2px dashed var(--destaque-amarelo);
+    border-radius: 10px;
+    max-width: 450px; 
+}
+
+.contato-info p, .contato-info ul {
+    margin-bottom: 10px;
+    text-align: left;
+    color: var(--preto);
+}
+
+.contato-info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.contato-info a {
+    color: var(--marrom);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contato-info a:hover {
+    text-decoration: underline;
+    color: #8B4513;
+}
+
+/* Footer */
+footer {
+    background-color: var(--marrom);
+    color: var(--branco);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    /* Altera o alinhamento para o logo ficar em cima do texto em telas pequenas */
+    #site-title {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    /* Ajuste de tamanho em telas pequenas */
+    .hero p {
+        font-size: 1.1rem; 
+    }
+    
+    body {
+        font-size: 1rem;
+    }
+    
+    .btn-contato {
+        margin-top: 30px; 
+    }
+    
+    /* NOVO: Ajusta o tamanho da fonte dos parágrafos da seção Contato em telas pequenas */
+    .contato-section p {
+        font-size: 1.1rem; 
+    }
+}
